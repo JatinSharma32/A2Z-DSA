@@ -23,7 +23,6 @@ void quickSort(vector<int> &v, int start, int end)
         if (i < j)
             swap(v[j], v[i]);
     }
-    if (piviot > v[j])
         swap(v[start], v[j]);
     quickSort(v, start, j - 1);
     quickSort(v, j + 1, end);
