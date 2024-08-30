@@ -1,3 +1,5 @@
+#include <bits/stdc++.h>
+using namespace std;
 
 /**
  * Rotate Array by K places
@@ -40,3 +42,28 @@ public:
         }
     }
 };
+
+int main()
+{
+    Solution solution;
+    vector<int> nums = {1, 2, 3, 4, 5, 6, 7}; // Example input
+    int k = 3;                                // Number of places to rotate
+
+    cout << "Original array: ";
+    for (int num : nums)
+    {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    solution.rotate(nums, k);
+
+    cout << "Rotated array: ";
+    for (int num : nums)
+    {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
