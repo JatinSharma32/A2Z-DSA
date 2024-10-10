@@ -50,6 +50,7 @@ public:
                 break;
             }
         }
+        // Edge case No next permutation left
         if (updateIndex == -1)
         {
             sort(arr.begin(), arr.end());
