@@ -1,6 +1,31 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// int Pivot(vector<int>& arr, int s, int e){
+//     int i=s+1,j=e, pivot=arr[s];
+//     while(i<j){
+//         while(arr[i]<=pivot && i<j) i++;
+//         while(arr[j]>pivot && i<j) j--;
+//         swap(arr[i],arr[j]);
+//     }
+//     if(arr[s]>arr[j]){
+//         swap(arr[s],arr[j]);
+//         return j;
+//     }else{
+//         swap(arr[s],arr[j-1]);
+//         return j-1;
+//     }
+// }
+
+// void QuickSort(vector<int>& arr, int s, int e){
+//     if(s>=e){
+//         return;
+//     }
+//     int pivot=Pivot(arr,s,e);
+//     QuickSort(arr,s,pivot-1);
+//     QuickSort(arr,pivot+1, e);
+// }
+
 void quickSort(vector<int> &v, int start, int end)
 {
     if (start >= end)
@@ -23,7 +48,7 @@ void quickSort(vector<int> &v, int start, int end)
         if (i < j)
             swap(v[j], v[i]);
     }
-        swap(v[start], v[j]);
+    swap(v[start], v[j]);
     quickSort(v, start, j - 1);
     quickSort(v, j + 1, end);
 }
